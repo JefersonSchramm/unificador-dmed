@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root{
+  --primary-color: #d3394c;
+  --secundary-color: #cee4ff;
+  --shadow-color: #CCC;
+  --text-color: #FFF;
+}
+
+html {
+  font-size: 62.5%;
+  background-color: #F5F5F5;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: 'karla', sans-serif;
+  position: relative;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-grow: 0.5;
+  margin: 10vh auto;
+  width: 60%;
+  border-radius: 10px;
+  background-color: #FFF;
+  box-shadow: 2px 2px 10px var(--shadow-color);
+}
+
+.cabecalho {
+  background-color: #d3394c;
+  color: #FFF;
+  height: 70px;
+  line-height: 70px;
+  text-align: center;
+  font-size: 1.5rem;
+  border-radius: 10px 10px 0 0;
+}
+
+.conteudo {
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  gap: 20px;
+}
+
+.rodape{
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  background-color: #d3394c;
+  color: #FFF;
+  border-radius: 0 0 10px 10px;
+}
+
+.formulario {
+  background-color: #FFF; /** remover **/
+}
+
+.formulario h2 {
+  color: #d3394c;
+  padding: 10px 0;
+}
+
+.formulario-conteudo {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.formulario-conteudo input {
+  height: 30px;
+  line-height: 30px;
+  padding: 0 10px;
+}
+
+.formulario-conteudo button {
+  height: 34px;
+  padding: 0 10px;
+}
