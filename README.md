@@ -1,0 +1,84 @@
+## Unificador Dmed
+O Unificador Dmed foi desenvolvido na necessidade das redes, que possuem mais de um prestador de serviço de saúde, de unificar as declarações das unidades para enviar em um único arquivo.
+O projeto foi desenvolvido utilizando HTML, CSS e Javascript.
+
+**Descrição do problema:**
+As Declarações de Serviços Médicos e de Saúde (Dmed) não podem ser enviadas individualmente se fazem parte de uma rede com mais de uma unidade de saúde. Elas devem ser enviadas pelo CNPJ principal, porém o sistema não permite o envio de mais de um arquivo.
+
+**Solução:**
+Como um responsável e/ou beneficiário podem se consultar em mais de uma unidade, o conteúdo dos arquivos não podem ser simplesmente copiados e colados de um para o outro. Os dados devem ser unificados, gerando apenas uma informação por pessoa.
+
+Exemplos: (Todos os dados, como nome, CPF e CNPJ são fictícios, gerados aleatóriamente)
+```
+ARQUIVO 1
+
+Dmed|2022|2021|N||S2000K|
+RESPO|41482939096|FULANA DE TAL|51|35501234||||
+DECPJ|70048857000167|EMPRESA FICTICIA UM|1|||41482939096|N|||
+PSS|
+RPPSS|29047615000|GIOVANY PENTEADO INFANTE|30000|
+RPPSS|29489243086|ILIDIO MENESES|260000|
+RPPSS|31208722026|HUGO TEVES GOUVEIA||
+BRPPSS|25621897013||MARIA TEVES GOUVEIA|245125|
+RPPSS|46034841003|CRYSTAL INES ROSMANINHO|25600|
+RPPSS|47226208067|SILVANA FOGACA FRANCA|63500|
+RPPSS|72151277020|EDI GRANJEIRO MILHEIRO|1400|
+RPPSS|74142216015|ZOEY CATELA PALOS|22325|
+RPPSS|79883318090|ADALBERTO ARAGAO CASTELO||
+BRPPSS|76512621077||ZHEN BARCELOS NEVES CASTELO|4800|
+RPPSS|88920129088|MANEL GARRAU NOROES||
+BRPPSS|64574370017||ELIEZER NOROES|201763|
+FIMDmed|
+```
+```
+ARQUIVO 2
+
+Dmed|2022|2021|N||S2000K|
+RESPO|41482939096|FULANA DE TAL|51|35501234||||
+DECPJ|78776133000141|EMPRESA FICTICIA DOIS|1|||41482939096|N|||
+PSS|
+RPPSS|29047615000|GIOVANY PENTEADO INFANTE|4253|
+RPPSS|31208722026|HUGO TEVES GOUVEIA||
+BRPPSS|25621897013||MARIA TEVES GOUVEIA|245125|
+RPPSS|47226208067|SILVANA FOGACA FRANCA|63500|
+RPPSS|72151277020|EDI GRANJEIRO MILHEIRO|145400|
+RPPSS|74142216015|ZOEY CATELA PALOS|2252325|
+RPPSS|79883318090|ADALBERTO ARAGAO CASTELO|5600|
+BRPPSS|76512621077||ZHEN BARCELOS NEVES CASTELO|57899|
+RPPSS|88920129088|MANEL GARRAU NOROES||
+BRPPSS|64574370017||ELIEZER NOROES|2016763|
+FIMDmed|
+```
+Após a unificação, os dados devem estar unificados e ordenados pelo número de CPF do responsável, com os valores pagos somados, como no exemplo final abaixo:
+
+```
+ARQUIVO UNIFICADO
+
+Dmed|2022|2021|N||S2000K|
+RESPO|41482939096|FULANA DE TAL|51|35501234||||
+DECPJ|87649651000195|EMPRESA FICTICIA UNIFICADA|1|||41482939096|N|||
+PSS|
+RPPSS|29047615000|GIOVANY PENTEADO INFANTE|34253|
+RPPSS|29489243086|ILIDIO MENESES|260000|
+RPPSS|31208722026|HUGO TEVES GOUVEIA||
+BRPPSS|25621897013||MARIA TEVES GOUVEIA|490250|
+RPPSS|46034841003|CRYSTAL INES ROSMANINHO|25600|
+RPPSS|47226208067|SILVANA FOGACA FRANCA|127000|
+RPPSS|72151277020|EDI GRANJEIRO MILHEIRO|146800|
+RPPSS|74142216015|ZOEY CATELA PALOS|2274650|
+RPPSS|79883318090|ADALBERTO ARAGAO CASTELO|5600|
+BRPPSS|76512621077||ZHEN BARCELOS NEVES CASTELO|62699|
+RPPSS|88920129088|MANEL GARRAU NOROES||
+BRPPSS|64574370017||ELIEZER NOROES|2218526|
+FIMDmed|
+```
+### Futuras impletantações:
+- [ ] Importar arquivo para carregar informações do cabeçalho
+- [ ] Edição do cabeçalho à ser gerado direto no navegador
+- [ ] Salvar as informações em LocalStorage
+
+
+#Autor 😎
+####Jeferson Eduardo Schramm
+
+-----
